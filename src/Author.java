@@ -3,6 +3,7 @@
  */
 import java.util.ArrayList;
 import java.util.List;
+@SuppressWarnings({"deprecation", "unchecked"})
 
 public class Author extends Person {
     private List books;
@@ -15,6 +16,7 @@ public class Author extends Person {
     /**
      * @deprecated Use publishedBooks instead
      */
+    @SuppressWarnings({"deprecation", "unchecked"})
     @Deprecated
     public List<String> getBooks() {
         return books;
@@ -28,7 +30,6 @@ public class Author extends Person {
         books.add(book);
     }
 
-    @Override
     public String sortName() {
         return String.format("%s, %s", lastName, firstName);
     }
